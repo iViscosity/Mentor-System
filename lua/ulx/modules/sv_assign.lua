@@ -82,6 +82,10 @@ local function AddMentor(mentor, mentee)
 
 	mentee:SetPData("mentor", mentor:SteamID64())
 
+	if not file.Exists("mentors/" .. mentor:SteamID64()) then
+		file.CreateDir("mentors/" .. mentor:SteamID64())
+	end
+
 	local menteeData = "mentors/" .. mentor:SteamID64() .. "/" .. mentee:SteamID64()
 	file.CreateDir(menteeData)
 	file.Write(menteeData .. "/commands.txt", "")
