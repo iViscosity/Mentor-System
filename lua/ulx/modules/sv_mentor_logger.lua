@@ -3,7 +3,7 @@ local gamemodesWithTeamSupport = { -- gamemodes that use special handling for te
 	["terrortown"] = true
 }
 
-local DEBUG = true
+local DEBUG = false -- for testing in offline conditions
 
 -- Player say logs everything, including commands.
 local function LogPlayerSay(ply, text, teamOnly)
